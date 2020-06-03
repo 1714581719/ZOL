@@ -4,21 +4,21 @@ header {
     background-color: #f6f6f6;
     line-height: 30px;
 }
-.box {
+.headerBox {
     width: 1200px;
     height: 100%;
     margin: 0 auto;
 }
-.box .left {
+.headerBox .left {
     float: left;
 }
-.box .right {
+.headerBox .right {
     float: right;
 }
-.box a {
+.headerBox a {
     color: #474747;
 }
-.box span {
+.headerBox span {
     font-size: 0;
     margin: 0 10px;
     color: #d3ccd3;

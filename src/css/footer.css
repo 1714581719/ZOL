@@ -4,29 +4,30 @@ footer {
     background-color: #302e2e;
     color: #999;
     position: relative;
+    bottom: -140px;
 }
-footer .box {
+footer .footerBox {
     width: 1200px;
     height: 100px;
     position: absolute;
     left: 0;right: 0;top: 0;bottom: 0;
     margin: auto;
 }
-footer .box p {
+footer .footerBox p {
     width: 1100px;
     margin-top: 13px;
 }
-footer .box p:first-child .text {
+footer .footerBox p:first-child .text {
     font-size: 14px;
 }
-footer .box p:first-child .phone {
+footer .footerBox p:first-child .phone {
     font-size: 18px;
     color: #fc002d;
 }
-footer .box p:last-child span{
+footer .footerBox p:last-child span{
     margin-right: 15px;
 }
-footer .box>img {
+footer .footerBox>img {
     float: right;
     width: 100px;
     height: 100px;
