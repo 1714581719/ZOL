@@ -3,13 +3,12 @@
 $box_width:1200px;
 
 .indexHeader {
-    height: 142px;
+    height: 177px;
 }
 .bigBox {
     background-color: #f6f6f6;
 }
 
-@import'navs';
 @import'content';
 @import'procurement';
 @import'classify';
