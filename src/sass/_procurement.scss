@@ -1,0 +1,86 @@
+.procurement {
+    width: $box_width;
+    height: 341px;
+    margin: 0 auto;
+}
+.procurementtop {
+    width: 100%;
+    height: 28px;
+    span:first-child {
+        height: 100%;
+        font-size: 20px;
+        color: #333;
+        float: left;
+        margin-left: 6px;
+    }
+    span:last-child {
+        height: 100%;
+        font-size: 14px;
+        color: #666;
+        float: right;
+        line-height: 28px;
+        &::after{
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-left: 5px;
+            background: url(../img/index_procurement.png);
+        }
+    }
+}
+.procurementcontent {
+    width: $box_width;
+    height: 306px;
+    margin-top: 7px;
+    ul {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        li {
+            width: 200px;
+            height: 100%;
+            float: left;
+            img {
+                width: 180px;
+                height: 135px;
+                margin: 19px 10px 0;
+            }
+            p {
+                width: 181px;
+                height: 40px;
+                font-size: 14px;
+                margin: 10px auto;
+                text-align: center;
+            }
+            span {
+                display: block;
+                width: 100%;
+                color: #f33;
+                font-size: 18px;
+                text-align: center;
+            }
+            button {
+                display: block;
+                width: 120px;
+                height: 32px;
+                color: #fc002d;
+                margin-top: 13px;
+                background-color: white;
+                border: 1px solid #fc002d;
+                border-radius: 3px;
+                margin: 13px auto 0;
+            }
+            &:hover {
+                img {
+                    width: 189px;
+                    height: 142px;
+                    margin: 12px 5.5px 0;
+                }
+                p {
+                    color: #fc002d;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,371 @@
+.indexHeader {
+  height: 142px;
+}
+
+.bigBox {
+  background-color: #f6f6f6;
+}
+
+.navs {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background: #fc002d;
+  color: white;
+  font-size: 16px;
+}
+
+.nav {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.nav .navlist {
+  width: 230px;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  background: #df022d;
+  margin-right: 10px;
+  position: relative;
+}
+.nav .navlist ul {
+  width: 100%;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: white;
+}
+.nav .navlist ul li {
+  height: 36px;
+  line-height: 38px;
+  color: #333;
+  font-size: 13px;
+  text-align: left;
+  padding-left: 30px;
+  position: relative;
+}
+.nav .navlist ul li::before {
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background: url(../img/index_nav_li.png) no-repeat;
+  position: absolute;
+  left: 8px;
+  top: 11px;
+}
+.nav .navlist ul li:hover {
+  background: #fc002d;
+  color: #fff;
+}
+.nav .navlist ul li:hover::before {
+  background-image: url(../img/index_nav_li_hover.png);
+}
+.nav a {
+  width: 115px;
+  height: 100%;
+  display: inline-block;
+  color: white;
+  text-align: center;
+}
+.nav a:hover {
+  background: #df022d;
+}
+
+.nav .navlist ul .list1 {
+  height: 38px;
+}
+.nav .navlist ul .list1::before {
+  background-position-y: 1px;
+}
+
+.nav .navlist ul .list2::before {
+  background-position-y: -32px;
+}
+
+.nav .navlist ul .list3::before {
+  background-position-y: -67px;
+}
+
+.nav .navlist ul .list4::before {
+  background-position-y: -101px;
+}
+
+.nav .navlist ul .list5::before {
+  background-position-y: -134px;
+}
+
+.nav .navlist ul .list6::before {
+  background-position-y: -168px;
+}
+
+.nav .navlist ul .list7::before {
+  background-position-y: -202px;
+}
+
+.nav .navlist ul .list8::before {
+  background-position-y: -237px;
+}
+
+.nav .navlist ul .list9::before {
+  background-position-y: -271px;
+}
+
+.nav .navlist ul .list10::before {
+  background-position-y: -304px;
+}
+
+.nav .navlist ul .list11 {
+  height: 38px;
+}
+.nav .navlist ul .list11::before {
+  background-position-y: -339px;
+}
+
+.content {
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto 34px;
+  position: relative;
+}
+.content .banner {
+  width: 730px;
+  height: 390px;
+  position: absolute;
+  top: 10px;
+  left: 240px;
+  background-color: yellowgreen;
+}
+.content .index_login, .content .news {
+  width: 218px;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ebebeb;
+}
+.content .index_login {
+  height: 198px;
+  top: 10px;
+}
+.content .news {
+  height: 183px;
+  bottom: 0px;
+}
+.content .news p {
+  width: 100%;
+  height: 26px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.content .news p img {
+  vertical-align: middle;
+}
+.content .news p:first-child {
+  margin-top: 17px;
+}
+
+.procurement {
+  width: 1200px;
+  height: 341px;
+  margin: 0 auto;
+}
+
+.procurementtop {
+  width: 100%;
+  height: 28px;
+}
+.procurementtop span:first-child {
+  height: 100%;
+  font-size: 20px;
+  color: #333;
+  float: left;
+  margin-left: 6px;
+}
+.procurementtop span:last-child {
+  height: 100%;
+  font-size: 14px;
+  color: #666;
+  float: right;
+  line-height: 28px;
+}
+.procurementtop span:last-child::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+  background: url(../img/index_procurement.png);
+}
+
+.procurementcontent {
+  width: 1200px;
+  height: 306px;
+  margin-top: 7px;
+}
+.procurementcontent ul {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.procurementcontent ul li {
+  width: 200px;
+  height: 100%;
+  float: left;
+}
+.procurementcontent ul li img {
+  width: 180px;
+  height: 135px;
+  margin: 19px 10px 0;
+}
+.procurementcontent ul li p {
+  width: 181px;
+  height: 40px;
+  font-size: 14px;
+  margin: 10px auto;
+  text-align: center;
+}
+.procurementcontent ul li span {
+  display: block;
+  width: 100%;
+  color: #f33;
+  font-size: 18px;
+  text-align: center;
+}
+.procurementcontent ul li button {
+  display: block;
+  width: 120px;
+  height: 32px;
+  color: #fc002d;
+  margin-top: 13px;
+  background-color: white;
+  border: 1px solid #fc002d;
+  border-radius: 3px;
+  margin: 13px auto 0;
+}
+.procurementcontent ul li:hover img {
+  width: 189px;
+  height: 142px;
+  margin: 12px 5.5px 0;
+}
+.procurementcontent ul li:hover p {
+  color: #fc002d;
+}
+
+.classify {
+  width: 1200px;
+  height: 565px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.classifyText {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+}
+.classifyText span {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.classifyText ul {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+}
+.classifyText ul li {
+  float: left;
+  font-size: 14px;
+  margin-left: 15px;
+}
+.classifyText ul li:hover {
+  color: #fc002d;
+}
+
+.classifyContent {
+  width: 100%;
+  height: 523px;
+}
+.classifyContent .classifyLeft {
+  width: 230px;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.classifyContent .classifyLeft span {
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  left: 60px;
+  top: 57px;
+}
+.classifyContent .classifyRight {
+  width: 970px;
+  height: 100%;
+  float: left;
+}
+.classifyContent .classifyRight li {
+  width: 230px;
+  height: 255px;
+  float: left;
+  margin: 0 0 13px 12.5px;
+  background-color: white;
+}
+.classifyContent .classifyRight li img {
+  width: 160px;
+  height: 120px;
+  margin: 25px 35px 0;
+}
+.classifyContent .classifyRight li p {
+  width: 183px;
+  height: 35px;
+  font-size: 14px;
+  margin: 21px auto 0;
+  text-align: center;
+}
+.classifyContent .classifyRight li span {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #f33;
+  text-align: center;
+  margin-top: 15px;
+}
+.classifyContent .classifyRight li:hover img {
+  width: 176px;
+  height: 132px;
+  margin: 13px 27px 0;
+}
+.classifyContent .classifyRight li:hover p {
+  color: #fc002d;
+}
+
+.classify1Left {
+  background: url(https://icon.zol-img.com.cn/ucdn/b-zol-com/1.0.2/img/floor01.ce043a8d.jpg) no-repeat;
+}
+
+.classify2Left {
+  background: url(https://icon.zol-img.com.cn/ucdn/b-zol-com/1.0.2/img/floor02.cfb61c0c.jpg) no-repeat;
+}
+
+.classify3Left {
+  background: url(https://icon.zol-img.com.cn/ucdn/b-zol-com/1.0.2/img/floor03.41be7eec.jpg) no-repeat;
+}
+
+.classify4Left {
+  background: url(https://icon.zol-img.com.cn/ucdn/b-zol-com/1.0.2/img/floor04.06c3415b.jpg) no-repeat;
+}
+
+.classify5Left {
+  background: url(https://icon.zol-img.com.cn/ucdn/b-zol-com/1.0.2/img/floor05.e4b55abb.jpg) no-repeat;
+}
+
+.classify6Left {
+  background: url(https://icon.zol-img.com.cn/ucdn/b-zol-com/1.0.2/img/floor06.9b772be5.jpg) no-repeat;
+}
+
+/*# sourceMappingURL=index.css.map */
