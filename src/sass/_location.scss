@@ -1,0 +1,16 @@
+.location {
+    width: $box_width;
+    height: 38px;
+    margin: 0 auto;
+    line-height: 38px;
+    a {
+        color: #666;
+    }
+    a:last-child {
+        color: #999;
+    }
+    span {
+        color: #999;
+        margin: 0 8px;
+    }
+}

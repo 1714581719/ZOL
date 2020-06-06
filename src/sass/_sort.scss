@@ -1,0 +1,78 @@
+$sort_left_width:109px;
+$sort_right_width:1090px;
+$sort_border_color: #e6e6e6;
+
+.sort {
+    width: $box_width;
+    margin: 0 auto 10px;
+    border-top: 1px solid $sort_border_color;
+    border-bottom: 1px solid $sort_border_color;
+    .category {
+        width: 100%;
+        height: 56px;
+        .category_left {
+            float: left;
+            width: $sort_left_width;
+            height: 100%;
+            background-color: #f7f7f7;
+            border-right: 1px solid $sort_border_color;
+            border-bottom: 1px solid $sort_border_color;
+            position: relative;
+        }
+        .category_right {
+            float: left;
+            width: $sort_right_width;
+            height: 100%;
+            border-bottom: 1px solid $sort_border_color;
+        }
+    }
+    .brand {
+        width: 100%;
+        height: 84px;
+        .brand_left {
+            float: left;
+            width: $sort_left_width;
+            height: 100%;
+            background-color: #f7f7f7;
+            border-right: 1px solid $sort_border_color;
+            position: relative;
+        }
+        .brand_right {
+            float: left;
+            width: $sort_right_width;
+            height: 100%;
+            position: relative;
+            button {
+                width: 52px;
+                height: 24px;
+                background-color: white;
+                border: 1px solid #eee;
+                position: absolute;
+                top: 18px;right: 20px;
+            }
+        }
+    }
+}
+.sort .category .category_left span,.sort .brand .brand_left span {
+    color: #666;
+    position: absolute;
+    top: 14px;left: 15px;
+    font-weight: bold;
+}
+.sort .categoryContent,.sort .brandContent {
+    margin: 14px 20px;
+}
+.sort .brandContent {
+    height: 56px;
+    overflow: hidden;
+}
+.sort .categoryContent a,.sort .brandContent a{
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 20px;
+    color: #005aa0;
+    &:hover {
+        color: #fc002d;
+    }
+}

@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+$box_width:1200px;
+
+.commonHeader {
+    height: 177px;
+}
+
+@import'location';
+@import'sort';
+@import'rank';
+@import'goodsList';
+@import'paging';

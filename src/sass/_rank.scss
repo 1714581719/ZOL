@@ -1,0 +1,62 @@
+$rank_height: 37px;
+
+.rank {
+    width: $box_width;
+    height: $rank_height;
+    line-height: $rank_height;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    border: 1px solid #f0f0f0;
+    border-bottom: 1px solid #fc002d;
+    ul {
+        li {
+            float: left;
+            width: 140px;
+            height: $rank_height;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+    }
+    .rank_right {
+        height: 24px;
+        float: right;
+        margin: 7px 10px 0 0;
+        span {
+            display: block;
+            float: left;
+            color: #666;
+            font-size: 14px;
+            height: 24px;
+            line-height: 24px;
+        }
+        span:first-child {
+            color: #fc002d;
+        }
+        a {
+            display: block;
+            width: 29px;
+            height: 24px;
+            float: left;
+            line-height: 24px;
+            text-align: center;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: 11px 5px;
+        }
+        a:nth-last-child(2) {
+            margin-left: 10px;
+            background-image: url(../img/rank_left.png);
+        }
+        a:last-child {
+            background-image: url(../img/rank_right.png);
+        }
+    }
+    
+    
+}
+
+.rank ul .rank_active {
+    background-color: #fc002d;
+    color: white;
+}

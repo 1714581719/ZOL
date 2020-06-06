@@ -1,3 +1,3 @@
 !function($) {
-    $('.indexHeader').load("http://localhost/ZOL/src/header.html");
+    $('.commonHeader').load("http://10.31.162.21/ZOL/src/header.html");
 }(jQuery);

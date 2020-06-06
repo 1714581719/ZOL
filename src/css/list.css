@@ -1,0 +1,182 @@
+.commonHeader {
+  height: 177px; }
+
+.location {
+  width: 1200px;
+  height: 38px;
+  margin: 0 auto;
+  line-height: 38px; }
+  .location a {
+    color: #666; }
+  .location a:last-child {
+    color: #999; }
+  .location span {
+    color: #999;
+    margin: 0 8px; }
+
+.sort {
+  width: 1200px;
+  margin: 0 auto 10px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6; }
+  .sort .category {
+    width: 100%;
+    height: 56px; }
+    .sort .category .category_left {
+      float: left;
+      width: 109px;
+      height: 100%;
+      background-color: #f7f7f7;
+      border-right: 1px solid #e6e6e6;
+      border-bottom: 1px solid #e6e6e6;
+      position: relative; }
+    .sort .category .category_right {
+      float: left;
+      width: 1090px;
+      height: 100%;
+      border-bottom: 1px solid #e6e6e6; }
+  .sort .brand {
+    width: 100%;
+    height: 84px; }
+    .sort .brand .brand_left {
+      float: left;
+      width: 109px;
+      height: 100%;
+      background-color: #f7f7f7;
+      border-right: 1px solid #e6e6e6;
+      position: relative; }
+    .sort .brand .brand_right {
+      float: left;
+      width: 1090px;
+      height: 100%;
+      position: relative; }
+      .sort .brand .brand_right button {
+        width: 52px;
+        height: 24px;
+        background-color: white;
+        border: 1px solid #eee;
+        position: absolute;
+        top: 18px;
+        right: 20px; }
+
+.sort .category .category_left span, .sort .brand .brand_left span {
+  color: #666;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  font-weight: bold; }
+
+.sort .categoryContent, .sort .brandContent {
+  margin: 14px 20px; }
+
+.sort .brandContent {
+  height: 56px;
+  overflow: hidden; }
+
+.sort .categoryContent a, .sort .brandContent a {
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  margin-right: 20px;
+  color: #005aa0; }
+  .sort .categoryContent a:hover, .sort .brandContent a:hover {
+    color: #fc002d; }
+
+.rank {
+  width: 1200px;
+  height: 37px;
+  line-height: 37px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  border: 1px solid #f0f0f0;
+  border-bottom: 1px solid #fc002d; }
+  .rank ul li {
+    float: left;
+    width: 140px;
+    height: 37px;
+    text-align: center;
+    color: #666;
+    font-size: 14px; }
+  .rank .rank_right {
+    height: 24px;
+    float: right;
+    margin: 7px 10px 0 0; }
+    .rank .rank_right span {
+      display: block;
+      float: left;
+      color: #666;
+      font-size: 14px;
+      height: 24px;
+      line-height: 24px; }
+    .rank .rank_right span:first-child {
+      color: #fc002d; }
+    .rank .rank_right a {
+      display: block;
+      width: 29px;
+      height: 24px;
+      float: left;
+      line-height: 24px;
+      text-align: center;
+      background-color: white;
+      background-repeat: no-repeat;
+      background-position: 11px 5px; }
+    .rank .rank_right a:nth-last-child(2) {
+      margin-left: 10px;
+      background-image: url(../img/rank_left.png); }
+    .rank .rank_right a:last-child {
+      background-image: url(../img/rank_right.png); }
+
+.rank ul .rank_active {
+  background-color: #fc002d;
+  color: white; }
+
+.goodsList {
+  width: 1200px;
+  margin: 10px auto 0; }
+
+.goodsUl {
+  width: 100%; }
+  .goodsUl::after {
+    content: "";
+    display: block;
+    clear: both; }
+  .goodsUl li {
+    width: 220px;
+    height: 320px;
+    float: left;
+    margin: 10px 10px 24px 10px; }
+    .goodsUl li a {
+      display: block;
+      width: 220px;
+      height: 220px; }
+      .goodsUl li a img {
+        width: 220px;
+        height: 165px;
+        margin: 22.5px 0; }
+    .goodsUl li p {
+      height: 40px;
+      margin: 8px 0 9px 0; }
+      .goodsUl li p:hover {
+        color: #fc002d; }
+    .goodsUl li span {
+      font-size: 20px;
+      color: #fc002d; }
+    .goodsUl li em {
+      display: block;
+      width: 14px;
+      height: 12px;
+      background-image: url(../img/list_goodslist.png);
+      background-repeat: no-repeat;
+      float: right;
+      margin-top: 5px; }
+    .goodsUl li:hover a img {
+      width: 242px;
+      height: 181.5px;
+      margin: 19.5px -11px; }
+
+.paging {
+  width: 1200px;
+  height: 38px;
+  background-color: yellowgreen; }
+
+/*# sourceMappingURL=list.css.map */
