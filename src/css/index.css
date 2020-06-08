@@ -14,8 +14,37 @@
     height: 390px;
     position: absolute;
     top: 10px;
-    left: 240px;
-    background-color: yellowgreen; }
+    left: 240px; }
+    .content .banner ul li {
+      position: absolute;
+      opacity: 0; }
+    .content .banner ol {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 10px; }
+      .content .banner ol li {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: #000;
+        opacity: .2;
+        margin: 0 4px; }
+      .content .banner ol .active {
+        background-color: #fc002d;
+        opacity: 1; }
+    .content .banner a {
+      display: block;
+      width: 40px;
+      height: 65px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      position: absolute; }
+    .content .banner .bannerleft {
+      left: 10px; }
+    .content .banner .bannerright {
+      right: 10px; }
   .content .index_login, .content .news {
     width: 218px;
     position: absolute;
@@ -164,8 +193,6 @@
       margin: 0 0 13px 12.5px;
       background-color: white; }
       .classifyContent .classifyRight li img {
-        width: 160px;
-        height: 120px;
         margin: 25px 35px 0; }
       .classifyContent .classifyRight li p {
         width: 183px;
