@@ -40,7 +40,9 @@
       height: 65px;
       background: rgba(0, 0, 0, 0.3);
       color: #fff;
-      position: absolute; }
+      position: absolute;
+      top: 162px;
+      font-size: 55px; }
     .content .banner .bannerleft {
       left: 10px; }
     .content .banner .bannerright {

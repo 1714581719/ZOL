@@ -1,6 +1,55 @@
 // 轮播图
 !function($) {
+    $lunbo = $('.banner');
+    $imgli = $('.banner ul li');
+    $olli = $('.banner ol li');
+    $left = $('.bannerleft');
+    $right = $('.bannerright');
 
+    let $index = 0;//接收下标
+
+    $olli.on('click',function() {
+        $index = $(this).index();
+        lunbo();
+    });
+
+    $left.on('click',function() {
+        $index--;
+        if($index < 0) {
+            $index = $imgli.length-1;
+        }
+        lunbo();
+    });
+    $right.on('click',function() {
+        $index++;
+        if($index > $imgli.length-1) {
+            $index = 0;
+        }
+        lunbo();
+    });
+    
+    function lunbo() {
+        $olli.eq($index).addClass('active').siblings('.banner ol li').removeClass('active');
+        $imgli.eq($index).css({
+            opacity: 1
+        }).siblings('.banner ul li').css({
+            opacity: 0
+        });
+    }
+
+    //设置自动轮播
+    let timer = setInterval(() => {
+        $right.click();
+    }, 2000);
+
+    // 鼠标移入停止自动轮播，移出恢复
+    $lunbo.hover(function() {
+        clearInterval(timer);
+    },function() {
+        let timer = setInterval(() => {
+            $right.click();
+        }, 2000);
+    });
 }(jQuery);
 
 // 热门采购渲染

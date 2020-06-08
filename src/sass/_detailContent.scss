@@ -2,6 +2,10 @@ $img_small_box_width:450px;
 $img_small_box_height:450px;
 $img_small_width:450px;
 $img_small_height:337.5px;
+$img_big_box_width:575px;
+$img_big_box_height:575px;
+$img_big_width:900px;
+$img_big_height:675px;
 
 .detailContent {
     width: $box_width;
@@ -10,6 +14,7 @@ $img_small_height:337.5px;
 }
 .detailContent_left {
     float: left;
+    position: relative;
     .img_small {
         width: $img_small_box_width;
         height: $img_small_box_height;
@@ -21,6 +26,19 @@ $img_small_height:337.5px;
             position: absolute;
             top: 0;right: 0;bottom: 0;left: 0;
             margin: auto;
+        }
+    }
+    .img_big {
+        width: $img_big_box_width;
+        height: $img_big_box_height;
+        border: 1px solid #ccc;
+        position: absolute;
+        left: $img_small_box_width;top: 0;
+        overflow: hidden;
+        z-index: 999;
+        img {
+            width: $img_big_width;
+            height: $img_big_height;
         }
     }
 }
