@@ -140,6 +140,9 @@ header {
     margin-right: 10px;
     position: relative;
   }
+  .nav .navlist span {
+    cursor: pointer;
+  }
   .nav .navlist ul {
     width: 100%;
     position: absolute;
@@ -204,10 +207,12 @@ header {
     margin-top: 10px;
   }
   .nav .navlist ul li div dl dt {
+    display: inline-block;
     height: 26px;
     line-height: 26px;
     font-size: 14px;
     color: #fc002d;
+    cursor: pointer;
   }
   .nav .navlist ul li div dl dd {
     font-size: 12px;

@@ -1,4 +1,122 @@
 @charset "utf-8";
 
 $box_width:1200px;
+$goods_height:78px;
 
+.commonHeader {
+    height: 177px;
+}
+
+.cart {
+    width: $box_width;
+    height: 400px;
+    margin: 24px auto 0;
+}
+h1 {
+    font-size: 18px;
+    color: #fc002d;
+}
+
+.cart_title {
+    width: 100%;
+    height: 36px;
+    border-top: 2px solid #fc002d;
+    background-color: #f5f5f5;
+    line-height: 36px;
+    font-size: 14px;
+    span {
+        display: block;
+        width: 180px;
+        float: left;
+        text-align: center;
+    }
+    span:first-child {
+        width: 600px;
+    }
+    span:last-child {
+        width: 60px;
+    }
+}
+
+.cart_goods {
+    width: 100%;
+    height: $goods_height;
+    line-height: $goods_height;
+    padding: 15px 0;
+    .goods_img {
+       width: 78px;
+       height: 78px;
+       border: 1px solid #ddd;
+       float: left;
+       margin-right: 10px;
+       position: relative;
+       img {
+           width: 78px;
+           height: 58.5px;
+           position: absolute;
+           left: 0;right: 0;top: 0;bottom: 0;
+           margin: auto;
+       }
+    }
+    &>span {
+        float: left;
+        display: block;
+        width: 180px;
+        height: $goods_height;
+        text-align: center;
+    }
+    .goods_title {
+        width: 510px;
+        text-align: left;
+    }
+    .number {
+        float: left;
+        width: 180px;
+        height: $goods_height;
+        position: relative;
+        span {
+            display: block;
+            width: 18px;
+            height: 20px;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 29px;
+            cursor:pointer;
+            img {
+                position: absolute;
+                top: 0;right: 0;bottom: 0;left: 0;
+                margin: auto;
+            }
+        }
+        span:first-child {
+            left: 50px;
+        }
+        span:last-child {
+            right: 50px;
+        }
+        input {
+            width: 38px;
+            height: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            position: absolute;
+            left: 70px;top: 29px;
+        }
+    }
+    .goods_delete {
+        width: 60px;
+        cursor: pointer;
+    }
+}
+
+.cart_submit_box {
+    width: 100%;
+    height: 64px;
+    border-top: 1px solid #ccc;
+}
+.cart_submit {
+    width: $box_width;
+    height: 100%;
+    background-color: blue;
+    margin: 0 auto;
+}

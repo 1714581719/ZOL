@@ -163,3 +163,75 @@
         });
     });
 }(jQuery);
+
+// 添加数量到cookie
+!function($) {
+    let arrsid = [];// 存储商品编号
+    let arrnum = [];// 存储商品数量
+    const $number = $('.number');
+    const $num_add = $('.num_add');
+    const $num_sub = $('.num_sub');
+    
+    
+    // 需要判断此商品是否是第一次加入购物车
+    // 第一次加入：在购物车页面创建商品列表
+    // 多次加入：不需要创建商品列表，追加数量
+
+    // 取出cookie
+    function cookietoarray() {
+        if($.cookie('cookiesid') || $.cookie('cookienum')) {
+            arrsid = $.cookie('cookiesid').split(',');
+            arrnum = $.cookie('cookienum').split(',');
+        }else {
+            arrsid = [];
+            arrnum = [];
+        }
+    }
+    cookietoarray();
+
+        console.log(arrsid);
+        console.log(arrnum);
+
+    // 点击加入购物车按钮事件
+    $('.add_cart').on('click',function() {
+        
+        // 获取当前商品的sid
+        let $sid = location.search.substring(1).split('=')[1];
+        console.log($sid);
+
+        // 取出当前cookie
+        cookietoarray();
+
+        console.log(arrsid);
+        console.log(arrnum);
+        console.log($.inArray($sid,arrsid) != -1);
+        
+
+        // 查找当前商品的sid在cookie是否存在
+        if($.inArray($sid,arrsid) != -1){
+            // 当前商品存在
+            //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
+            // let $num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('#count').val()); //取值
+            // arrnum[$.inArray($sid, arrsid)] = $num; //赋值
+            arrnum[$.inArray($sid,arrsid)] = parseInt(arrnum[$.inArray($sid,arrsid)]) + parseInt($number.val());
+            $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
+        }else {
+            arrsid.push($sid);
+            arrnum.push($number.val());
+            $.cookie('cookiesid', arrsid, { expires: 10, path: '/' });
+            $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
+        }
+        alert('按钮触发了');
+    });
+
+    // 点击减
+    $num_sub.on('click',function() {
+        if($number.val()>0) {
+            $number.val($number.val() - 1);
+        }
+    });
+    // 点击加
+    $num_add.on('click',function() {
+        $number.val(parseInt($number.val()) + 1);
+    });
+}(jQuery);
