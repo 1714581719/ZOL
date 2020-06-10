@@ -36,17 +36,32 @@ form {
         display: block;
         clear: both;
     }
-    label {
-        font-size: 14px;
-    }
-    input {
-        width: 548px;
+    p {
+        width: 100%;
         height: 36px;
-        border: 1px solid #ddd;
+        line-height: 36px;
         margin-bottom: 30px;
-        font-size: 14px;
-        text-indent: 20px;
+        position: relative;
+        label {
+            font-size: 14px;
+        }
+        input {
+            width: 548px;
+            height: 100%;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            text-indent: 20px;
+        }
+        span {
+            display: block;
+            width: 200px;
+            height: 100%;
+            position: absolute;
+            left: 635px;top: 0;
+            font-size: 13px;
+        }
     }
+    
     button {
         width: 550px;
         height:38px;
@@ -54,12 +69,13 @@ form {
         background-color: #ddd;
         border: none;
         float: right;
+        margin-right: 15px;
     }
     div {
         width: 100%;
         height: 12px;
         float: right;
-        margin-top: 16px;
+        margin: 16px 15px 0 0;
         a {
             float: right;
             color: #005aa0;
