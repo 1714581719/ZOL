@@ -22,12 +22,12 @@
                 2.填写公司信息
             </div>
         </div>
-        <form action="">
-            <p><label for="">登录账号：</label><input type="text" class="uesrname" name="uesrname" placeholder="请输入账号"><span></span></p>
-            <p><label for="">手机号码：</label><input type="text" class="tel" name="tel" placeholder="请输入手机号码"><span></span></p>
-            <p><label for="">登录密码：</label><input type="password" class="password" name="password" placeholder="请输入密码"><span></span></p>
-            <p><label for="">确认密码：</label><input type="password" class="repass" name="repass" placeholder="确认密码"><span></span></p>
-            <button type="submit" class="submit">提交</button>
+        <form action="http://10.31.162.21/ZOL/php/register.php" method="post">
+            <p><label for="uesrname">登录账号：</label><input type="text" class="username" name="username" placeholder="请输入账号"><span></span></p>
+            <p><label for="tel">手机号码：</label><input type="text" class="tel" name="tel" placeholder="请输入手机号码"><span></span></p>
+            <p><label for="password">登录密码：</label><input type="password" class="password" name="password" placeholder="请输入密码"><span></span></p>
+            <p><label for="repass">确认密码：</label><input type="password" class="repass" name="repass" placeholder="确认密码"><span></span></p>
+            <input type="submit" name="submit"  id="submit" value="提交">
             <div><a href="login.html">已有账号登录</a></div>
         </form>
     </div>
@@ -35,6 +35,7 @@
     <div class="commonFooter"></div>
 </body>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="script/jquery.cookie.js"></script>
     <script src="script/loginHeader.js"></script>
     <script src="script/footer.js"></script>
     <script src="script/register.js"></script>

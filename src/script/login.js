@@ -1,18 +1,22 @@
 !function($){
-    $('.submit').on('click',function() {
+    const $username = $('.username');
+    const $password = $('.password');
+    const $submit = $('.submit');
+
+    $submit.on('click',function() {
         $.ajax({
             type: 'post',
-            url: 'http://localhost/ZOL/php/login.php',
+            url: 'http://10.31.162.21/ZOL/php/login.php',
             data: {
-                user: $('.username').val(),
-                pass: $('.password').val()
+                username: $username.val(),
+                password: $password.val()
             }
         }).done(function (result) {
             if (result) {
-                location.href = "index.html";
-                localStorage.setItem('username', $('.username').val());
+                location.href = "http://10.31.162.21/ZOL/src/index.html";
+                $.cookie('id', $username.val(), { expires: 10, path: '/' });
             } else {
-                $('.password').val('');
+                $password.val('');
                 alert('用户名或者密码错误');
             }
         });

@@ -187,11 +187,6 @@
             arrnum = [];
         }
     }
-    cookietoarray();
-
-        console.log(arrsid);
-        console.log(arrnum);
-
     // 点击加入购物车按钮事件
     $('.add_cart').on('click',function() {
         
@@ -201,11 +196,6 @@
 
         // 取出当前cookie
         cookietoarray();
-
-        console.log(arrsid);
-        console.log(arrnum);
-        console.log($.inArray($sid,arrsid) != -1);
-        
 
         // 查找当前商品的sid在cookie是否存在
         if($.inArray($sid,arrsid) != -1){
@@ -221,7 +211,7 @@
             $.cookie('cookiesid', arrsid, { expires: 10, path: '/' });
             $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
         }
-        alert('按钮触发了');
+        location.href = "http://10.31.162.21/ZOL/src/cart.html";
     });
 
     // 点击减

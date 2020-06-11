@@ -12,8 +12,16 @@ header {
 .headerBox .left {
     float: left;
 }
-.headerBox .right {
+.headerBox .right1 {
     float: right;
+}
+.headerBox .right2 {
+    float: right;
+    display: none;
+}
+.headerBox .right2 a {
+    float: left;
+    margin-right: 20px;
 }
 .headerBox a {
     color: #474747;

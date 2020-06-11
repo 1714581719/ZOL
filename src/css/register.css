@@ -50,7 +50,7 @@ form {
       left: 635px;
       top: 0;
       font-size: 13px; }
-  form button {
+  form #submit {
     width: 550px;
     height: 38px;
     color: #999;
