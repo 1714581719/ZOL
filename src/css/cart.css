@@ -3,7 +3,6 @@
 
 .cart {
   width: 1200px;
-  height: 400px;
   margin: 24px auto 0; }
 
 h1 {
@@ -17,13 +16,19 @@ h1 {
   background-color: #f5f5f5;
   line-height: 36px;
   font-size: 14px; }
+  .cart_title label {
+    display: block;
+    float: left;
+    width: 60px;
+    font-size: 14px;
+    text-align: center; }
   .cart_title span {
     display: block;
     width: 180px;
     float: left;
     text-align: center; }
-  .cart_title span:first-child {
-    width: 600px; }
+  .cart_title span:nth-child(2) {
+    width: 540px; }
   .cart_title span:last-child {
     width: 60px; }
 
@@ -32,6 +37,12 @@ h1 {
   height: 78px;
   line-height: 78px;
   padding: 15px 0; }
+  .cart_goods label {
+    display: block;
+    float: left;
+    width: 60px;
+    font-size: 14px;
+    text-align: center; }
   .cart_goods .goods_img {
     width: 78px;
     height: 78px;
@@ -55,7 +66,7 @@ h1 {
     height: 78px;
     text-align: center; }
   .cart_goods .goods_title {
-    width: 510px;
+    width: 450px;
     text-align: left; }
   .cart_goods .number {
     float: left;
@@ -101,7 +112,35 @@ h1 {
 .cart_submit {
   width: 1200px;
   height: 100%;
-  background-color: blue;
-  margin: 0 auto; }
+  margin: 0 auto;
+  line-height: 64px; }
+  .cart_submit .cart_submit_left {
+    float: left; }
+    .cart_submit .cart_submit_left label {
+      display: block;
+      float: left;
+      width: 60px;
+      font-size: 14px;
+      text-align: center; }
+    .cart_submit .cart_submit_left span {
+      cursor: pointer; }
+  .cart_submit .cart_submit_right {
+    float: right; }
+    .cart_submit .cart_submit_right p {
+      float: left;
+      margin-right: 34px; }
+    .cart_submit .cart_submit_right p:nth-child(2) {
+      margin-right: 0; }
+    .cart_submit .cart_submit_right p:nth-child(3) {
+      font-size: 20px;
+      color: #fc002d; }
+    .cart_submit .cart_submit_right button {
+      float: left;
+      width: 110px;
+      height: 64px;
+      background-color: #fc002d;
+      border: none;
+      font-size: 18px;
+      color: #fff; }
 
 /*# sourceMappingURL=cart.css.map */

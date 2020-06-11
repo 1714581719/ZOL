@@ -168,6 +168,7 @@
 !function($) {
     let arrsid = [];// 存储商品编号
     let arrnum = [];// 存储商品数量
+    let $username = 0;
     const $number = $('.number');
     const $num_add = $('.num_add');
     const $num_sub = $('.num_sub');
@@ -179,9 +180,15 @@
 
     // 取出cookie
     function cookietoarray() {
-        if($.cookie('cookiesid') || $.cookie('cookienum')) {
-            arrsid = $.cookie('cookiesid').split(',');
-            arrnum = $.cookie('cookienum').split(',');
+        if($.cookie('id')) {
+            $username = $.cookie('id');
+            if($.cookie($username + 'sid') || $.cookie($username + 'num')) {
+                arrsid = $.cookie($username + 'sid').split(',');
+                arrnum = $.cookie($username + 'num').split(',');
+            }else {
+                arrsid = [];
+                arrnum = [];
+            }
         }else {
             arrsid = [];
             arrnum = [];
@@ -192,26 +199,30 @@
         
         // 获取当前商品的sid
         let $sid = location.search.substring(1).split('=')[1];
-        console.log($sid);
 
         // 取出当前cookie
         cookietoarray();
 
-        // 查找当前商品的sid在cookie是否存在
-        if($.inArray($sid,arrsid) != -1){
-            // 当前商品存在
-            //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
-            // let $num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('#count').val()); //取值
-            // arrnum[$.inArray($sid, arrsid)] = $num; //赋值
-            arrnum[$.inArray($sid,arrsid)] = parseInt(arrnum[$.inArray($sid,arrsid)]) + parseInt($number.val());
-            $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
+        if(!$username) {
+            alert('请先登录！');
+            location.href = "http://10.31.162.21/ZOL/src/detail.html";
         }else {
-            arrsid.push($sid);
-            arrnum.push($number.val());
-            $.cookie('cookiesid', arrsid, { expires: 10, path: '/' });
-            $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
+            // 查找当前商品的sid在cookie是否存在
+            if($.inArray($sid,arrsid) != -1){
+                // 当前商品存在
+                //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
+                // let $num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('#count').val()); //取值
+                // arrnum[$.inArray($sid, arrsid)] = $num; //赋值
+                arrnum[$.inArray($sid,arrsid)] = parseInt(arrnum[$.inArray($sid,arrsid)]) + parseInt($number.val());
+                $.cookie($username + 'num', arrnum, { expires: 10, path: '/' });
+            }else {
+                arrsid.push($sid);
+                arrnum.push($number.val());
+                $.cookie($username + 'sid', arrsid, { expires: 10, path: '/' });
+                $.cookie($username + 'num', arrnum, { expires: 10, path: '/' });
+            }
+            location.href = "http://10.31.162.21/ZOL/src/cart.html";
         }
-        location.href = "http://10.31.162.21/ZOL/src/cart.html";
     });
 
     // 点击减
