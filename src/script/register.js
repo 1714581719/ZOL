@@ -34,9 +34,8 @@
             $namelock = false;
         }
         // 判断用户是否输入除数字和英文字母之外的字符，如果有，不录入
-        if(!/^[a-zA-Z0-9]$/.test($username.val().substr(-1))){
-            // 输入的时其他字符，重新赋值账号，将最后一位字符去掉，并提示
-            $username.val($username.val().substring(0,$username.val().length-1));
+        if(/[\W_]/g.test($username.val())) {
+            $username.val($username.val().replace(/[\W_]/g,""));
             $span.eq(0).html('账号由大小写字母和数字组成').css('color','red');
         }
         // 判断输入正确勾选并提示
@@ -93,10 +92,9 @@
             $tellock = false;
         }
         // 判断用户是否输入除数字之外的字符，如果有，不录入
-        if(!/^\d$/g.test($tel.val().substr(-1))){
-            // 输入的是除数字外的数值，重新赋值手机号码，将最后一位字符去掉，并提示
-            $tel.val($tel.val().substring(0,$tel.val().length-1));
-            $span.eq(1).html('账号由数字组成').css('color','red');
+        if(/[\D]/g.test($tel.val())) {
+            $tel.val($tel.val().replace(/[\D]/g,""));
+            $span.eq(1).html('手机号由数字组成').css('color','red');
         }
         // 判断输入正确勾选并提示
         if($tel.val().length = 11 && $telreg.test($tel.val())) {

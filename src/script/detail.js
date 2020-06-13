@@ -235,4 +235,12 @@
     $num_add.on('click',function() {
         $number.val(parseInt($number.val()) + 1);
     });
+    // 直接输入数量
+    $number.on('input',function() {
+        // 禁止用户输入除数字外的其他字符
+        $number.val($number.val().replace(/[\D]/ig,""));
+        if($number.val() > 999) {
+            $number.val(999);
+        }
+    })
 }(jQuery);

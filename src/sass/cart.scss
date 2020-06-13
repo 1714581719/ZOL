@@ -150,6 +150,9 @@ h1 {
         p {
             float: left;
             margin-right: 34px;
+            .goods_num {
+                color: #fc002d;
+            }
         }
         p:nth-child(2) {
             margin-right: 0;

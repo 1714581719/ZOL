@@ -129,6 +129,8 @@ h1 {
     .cart_submit .cart_submit_right p {
       float: left;
       margin-right: 34px; }
+      .cart_submit .cart_submit_right p .goods_num {
+        color: #fc002d; }
     .cart_submit .cart_submit_right p:nth-child(2) {
       margin-right: 0; }
     .cart_submit .cart_submit_right p:nth-child(3) {
