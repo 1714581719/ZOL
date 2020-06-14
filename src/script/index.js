@@ -52,6 +52,21 @@
     });
 }(jQuery);
 
+// 登录名称渲染
+!function($) {
+    let $sid = 0;
+    if($.cookie('id')) {
+        $sid = $.cookie('id');
+        $('.index_login1').css({
+            display: 'none'
+        });
+        $('.index_login2').css({
+            display: 'block'
+        });
+        $('.index_login2 p').html($sid);
+    }
+}(jQuery);
+
 // 热门采购渲染
 !function($) {
     $.ajax({
